@@ -1,0 +1,63 @@
+$Dark-Gray: hsl(0, 0%, 63%);
+$Black: hsl(0, 0%, 0%);
+$White: hsl(0, 0%, 100%);
+$Very-Dark-Gray: hsl(0, 0%, 27%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width:1020px) and (max-width:2440px) {
+    body {
+        color: $Black;
+        background-color: $White;
+        font-family: 'Spartan', sans-serif;
+
+        height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "a a a a a a b b b b"
+            "a a a a a a b b b b"
+            "c c c d d d d e e e";
+    }
+
+
+    .div1 {
+        grid-area: a;
+        background-image: url('./images/desktop-image-hero-1.jpg');
+    }
+
+    .div2 {
+        grid-area: b;
+    }
+
+    .div3 {
+        grid-area: c;
+        background-image: url('./images/image-about-dark.jpg');
+    }
+
+    .div4 {
+        grid-area: d;
+        display: grid;
+        place-items: center;
+
+        .div4-text {
+            width: 80%;
+        }
+    }
+
+    .div5 {
+        grid-area: e;
+        background-image: url('./images/image-about-light.jpg');
+    }
+
+    .img {
+        background-position: center;
+        background-size: cover;
+    }
+
+}
