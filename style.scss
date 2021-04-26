@@ -9,12 +9,14 @@ $Very-Dark-Gray: hsl(0, 0%, 27%);
     box-sizing: border-box;
 }
 
+
+
 @media screen and (min-width:1020px) and (max-width:2440px) {
     body {
         color: $Black;
         background-color: $White;
         font-family: 'Spartan', sans-serif;
-
+        font-size: 1rem;
         height: 100vh;
         width: 100%;
         display: grid;
@@ -26,13 +28,81 @@ $Very-Dark-Gray: hsl(0, 0%, 27%);
     }
 
 
-    .div1 {
+
+
+    .div-menu {
+        grid-row: 1;
+        grid-column: 1/7;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        color: $White;
+        width: 50%;
+        height: 2rem;
+        margin: 3rem 0 0 6rem;
+        align-items: flex-end;
+        cursor: pointer;
+        justify-content: space-between;
+
+        &>svg {
+            height: 20px;
+            width: 6rem;
+            margin-right: 2rem;
+        }
+
+        &>svg>path {
+            transform: scale(1.5);
+        }
+
+        &>li {
+            list-style-type: none;
+            float: left;
+            text-transform: lowercase;
+        }
+
+    }
+
+    .div1-1 {
         grid-area: a;
         background-image: url('./images/desktop-image-hero-1.jpg');
     }
 
+    .div1-2 {
+        grid-area: a;
+        background-image: url('./images/desktop-image-hero-2.jpg');
+    }
+
+    .div1-3 {
+        grid-area: a;
+        background-image: url('./images/desktop-image-hero-3.jpg');
+    }
+
     .div2 {
         grid-area: b;
+        display: grid;
+        place-items: center;
+
+
+        .div2-text {
+            width: 80%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &>h1 {
+                font-size: 3rem;
+                font-weight: 700;
+                padding-bottom: 1rem;
+            }
+
+            &>p {
+                opacity: .7;
+                line-height: 1.6rem;
+            }
+
+
+        }
     }
 
     .div3 {
@@ -47,7 +117,21 @@ $Very-Dark-Gray: hsl(0, 0%, 27%);
 
         .div4-text {
             width: 80%;
+
+            &>h3 {
+                letter-spacing: .4rem;
+                font-weight: 700;
+                padding-bottom: 1rem;
+                text-transform: uppercase;
+            }
+
+            &>p {
+                opacity: .7;
+                line-height: 1.6rem;
+            }
         }
+
+
     }
 
     .div5 {
@@ -60,4 +144,28 @@ $Very-Dark-Gray: hsl(0, 0%, 27%);
         background-size: cover;
     }
 
+    .div-btns {
+        height: 70px;
+        grid-column: 7/8;
+        grid-row: 2;
+        align-self: end;
+        background-color: $Black;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &>div {
+            display: grid;
+            place-items: center;
+        }
+    }
+
+
+    #option3 {
+        display: none;
+    }
+
+    #option2 {
+        display: none;
+    }
 }

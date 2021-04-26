@@ -10,6 +10,7 @@
     color: black;
     background-color: white;
     font-family: 'Spartan', sans-serif;
+    font-size: 1rem;
     height: 100vh;
     width: 100%;
     display: -ms-grid;
@@ -20,7 +21,47 @@
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas: "a a a a a a b b b b" "a a a a a a b b b b" "c c c d d d d e e e";
   }
-  .div1 {
+  .div-menu {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1/7;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    color: white;
+    width: 50%;
+    height: 2rem;
+    margin: 3rem 0 0 6rem;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    cursor: pointer;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .div-menu > svg {
+    height: 20px;
+    width: 6rem;
+    margin-right: 2rem;
+  }
+  .div-menu > svg > path {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  .div-menu > li {
+    list-style-type: none;
+    float: left;
+    text-transform: lowercase;
+  }
+  .div1-1 {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     -ms-grid-column: 1;
@@ -28,12 +69,54 @@
     grid-area: a;
     background-image: url("./images/desktop-image-hero-1.jpg");
   }
+  .div1-2 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-area: a;
+    background-image: url("./images/desktop-image-hero-2.jpg");
+  }
+  .div1-3 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-area: a;
+    background-image: url("./images/desktop-image-hero-3.jpg");
+  }
   .div2 {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     -ms-grid-column: 7;
     -ms-grid-column-span: 4;
     grid-area: b;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+  }
+  .div2 .div2-text {
+    width: 80%;
+    height: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .div2 .div2-text > h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+  }
+  .div2 .div2-text > p {
+    opacity: .7;
+    line-height: 1.6rem;
   }
   .div3 {
     -ms-grid-row: 3;
@@ -54,6 +137,16 @@
   .div4 .div4-text {
     width: 80%;
   }
+  .div4 .div4-text > h3 {
+    letter-spacing: .4rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  .div4 .div4-text > p {
+    opacity: .7;
+    line-height: 1.6rem;
+  }
   .div5 {
     -ms-grid-row: 3;
     -ms-grid-column: 8;
@@ -64,6 +157,32 @@
   .img {
     background-position: center;
     background-size: cover;
+  }
+  .div-btns {
+    height: 70px;
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 1;
+    grid-column: 7/8;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-row-align: end;
+        align-self: end;
+    background-color: black;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .div-btns > div {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+  }
+  #option3 {
+    display: none;
+  }
+  #option2 {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
