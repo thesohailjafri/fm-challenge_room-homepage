@@ -129,6 +129,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .div2 .div2-text > h1 {
@@ -299,6 +300,9 @@ body {
   }
   .div1-3 {
     background-image: url("./images/mobile-image-hero-3.jpg");
+  }
+  .div2 {
+    margin: 0;
   }
   .div2 .div2-text {
     width: 90%;

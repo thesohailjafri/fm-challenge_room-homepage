@@ -98,6 +98,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-bottom: 2rem;
 
         &>h1 {
             font-size: 3rem;
@@ -249,6 +250,7 @@ body {
     }
 
     .div2 {
+        margin: 0;
 
         .div2-text {
             width: 90%;
