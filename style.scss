@@ -9,163 +9,273 @@ $Very-Dark-Gray: hsl(0, 0%, 27%);
     box-sizing: border-box;
 }
 
+#option3 {
+    display: none;
+}
+
+#option2 {
+    display: none;
+}
+
+body {
+    color: $Black;
+    background-color: $White;
+    font-family: 'Spartan', sans-serif;
+}
 
 
-@media screen and (min-width:1020px) and (max-width:2440px) {
-    body {
-        color: $Black;
-        background-color: $White;
-        font-family: 'Spartan', sans-serif;
-        font-size: 1rem;
-        height: 100vh;
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-template-areas: "a a a a a a b b b b"
-            "a a a a a a b b b b"
-            "c c c d d d d e e e";
+
+body {
+    font-size: 1rem;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "a a a a a a b b b b"
+        "a a a a a a b b b b"
+        "c c c d d d d e e e";
+}
+
+.div-menu {
+    grid-row: 1;
+    grid-column: 1/7;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    color: $White;
+    width: 50%;
+    height: 2rem;
+    margin: 3rem 0 0 6rem;
+    align-items: flex-end;
+    cursor: pointer;
+    justify-content: space-between;
+
+    &>svg {
+        height: 20px;
+        width: 6rem;
+        margin-right: 2rem;
+    }
+
+    &>svg>path {
+        transform: scale(1.5);
+    }
+
+    &>span {
+        text-transform: lowercase;
+    }
+
+}
+
+.div-menu-mobi {
+    display: none;
+}
+
+.div1-1 {
+    grid-area: a;
+    background-image: url('./images/desktop-image-hero-1.jpg');
+}
+
+.div1-2 {
+    grid-area: a;
+    background-image: url('./images/desktop-image-hero-2.jpg');
+}
+
+.div1-3 {
+    grid-area: a;
+    background-image: url('./images/desktop-image-hero-3.jpg');
+}
+
+.div2 {
+    grid-area: b;
+    display: grid;
+    place-items: center;
+
+
+    .div2-text {
+        width: 80%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &>h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            padding-bottom: 1rem;
+        }
+
+        &>p {
+            opacity: .6;
+            line-height: 1.6rem;
+        }
+
+
+
+
+
+    }
+}
+
+.div3 {
+    grid-area: c;
+    background-image: url('./images/image-about-dark.jpg');
+}
+
+.div4 {
+    grid-area: d;
+    display: grid;
+    place-items: center;
+
+    .div4-text {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &>h3 {
+            letter-spacing: .35rem;
+            font-weight: 700;
+            padding-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        &>p {
+            opacity: .6;
+            line-height: 1.6rem;
+        }
     }
 
 
+}
 
+.div5 {
+    grid-area: e;
+    background-image: url('./images/image-about-light.jpg');
+}
+
+.img {
+    background-position: center;
+    background-size: cover;
+}
+
+.div-btns {
+    height: 70px;
+    grid-column: 7/8;
+    grid-row: 2;
+    align-self: end;
+    background-color: $Black;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &>div {
+        display: grid;
+        place-items: center;
+    }
+}
+
+
+
+@media screen and (max-width:600px) {
+    body {
+        font-size: 0.9rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 360px auto 260px auto 260px;
+        grid-template-areas: "a a a"
+            "b b b"
+            "c c c"
+            "d d d"
+            "e e e";
+    }
 
     .div-menu {
-        grid-row: 1;
-        grid-column: 1/7;
-        z-index: 1;
+        display: none;
+    }
+
+    .div-menu-mobi {
         display: flex;
-        flex-direction: row;
-        color: $White;
-        width: 50%;
-        height: 2rem;
-        margin: 3rem 0 0 6rem;
-        align-items: flex-end;
-        cursor: pointer;
-        justify-content: space-between;
+        grid-row: 1;
+        grid-column: 1/4;
+        z-index: 1;
+        height: 100px;
+        align-items: center;
 
-        &>svg {
-            height: 20px;
-            width: 6rem;
-            margin-right: 2rem;
+        width: 100%;
+
+        &>main:first-of-type {
+            width: 100%;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            &>svg:last-of-type {
+                grid-column: 2/3;
+                place-self: center;
+            }
         }
 
-        &>svg>path {
-            transform: scale(1.5);
-        }
-
-        &>li {
-            list-style-type: none;
-            float: left;
+        &>main:last-of-type {
+            width: 100%;
+            display: none;
             text-transform: lowercase;
-        }
+            font-weight: 600;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.5rem;
 
+            &>div>span {
+                margin-left: 1.5rem;
+            }
+
+        }
     }
 
     .div1-1 {
-        grid-area: a;
-        background-image: url('./images/desktop-image-hero-1.jpg');
+        background-image: url('./images/mobile-image-hero-1.jpg');
     }
 
     .div1-2 {
-        grid-area: a;
-        background-image: url('./images/desktop-image-hero-2.jpg');
+        background-image: url('./images/mobile-image-hero-2.jpg');
     }
 
     .div1-3 {
-        grid-area: a;
-        background-image: url('./images/desktop-image-hero-3.jpg');
+        background-image: url('./images/mobile-image-hero-3.jpg');
     }
 
     .div2 {
-        grid-area: b;
-        display: grid;
-        place-items: center;
-
 
         .div2-text {
-            width: 80%;
-            height: 70%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            width: 90%;
+            height: 25rem;
+            margin: 2rem 0;
+            padding: 2rem 0;
 
             &>h1 {
-                font-size: 3rem;
-                font-weight: 700;
-                padding-bottom: 1rem;
+                font-size: 2rem;
             }
 
-            &>p {
-                opacity: .7;
-                line-height: 1.6rem;
+            &>h3 {
+                padding-top: 2rem;
             }
-
-
         }
-    }
 
-    .div3 {
-        grid-area: c;
-        background-image: url('./images/image-about-dark.jpg');
     }
 
     .div4 {
-        grid-area: d;
-        display: grid;
-        place-items: center;
-
         .div4-text {
-            width: 80%;
-
-            &>h3 {
-                letter-spacing: .4rem;
-                font-weight: 700;
-                padding-bottom: 1rem;
-                text-transform: uppercase;
-            }
-
-            &>p {
-                opacity: .7;
-                line-height: 1.6rem;
-            }
+            width: 90%;
+            height: 20rem;
+            margin: 2rem 0;
+            padding: 2rem 0;
         }
-
-
-    }
-
-    .div5 {
-        grid-area: e;
-        background-image: url('./images/image-about-light.jpg');
-    }
-
-    .img {
-        background-position: center;
-        background-size: cover;
     }
 
     .div-btns {
-        height: 70px;
-        grid-column: 7/8;
-        grid-row: 2;
-        align-self: end;
-        background-color: $Black;
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        &>div {
-            display: grid;
-            place-items: center;
-        }
+        grid-column: 3/4;
+        grid-row: 1;
     }
 
-
-    #option3 {
-        display: none;
-    }
-
-    #option2 {
-        display: none;
-    }
 }

@@ -1,7 +1,5 @@
 let pointer = 1;
-// const o1 = document.querySelector("#option1").style.color = "red";
-// const o2 = document.querySelectorAll("#option2");
-// const o3 = document.querySelectorAll("#option3");
+
 const hide = (o) => {
     o.forEach(el => {
         el.style.display = "none";
@@ -48,6 +46,28 @@ const next = () => {
 const prev = () => {
     pointer === 1 ? pointer = 3 : pointer -= 1;
     hideshow(pointer);
+};
+
+//
+
+let isMenu = false;
+
+const menuToggle = () => {
+
+    isMenu = !isMenu;
+
+    const mt = document.getElementById('menu-show-true');
+    const mf = document.getElementById('menu-show-false');
+    const m = document.getElementById('menu-show');
+    if (isMenu) {
+        mt.style.display = "flex";
+        mf.style.display = "none";
+        m.style.backgroundColor = "hsl(0, 0%, 100%)";
+    } else {
+        mf.style.display = "grid";
+        mt.style.display = "none";
+        m.style.backgroundColor = "transparent";
+    }
 };
 
 
