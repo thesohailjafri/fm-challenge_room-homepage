@@ -142,6 +142,12 @@ body {
   line-height: 1.6rem;
 }
 
+.div2 .div2-text > h3 {
+  letter-spacing: .4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 .div3 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -175,7 +181,7 @@ body {
 }
 
 .div4 .div4-text > h3 {
-  letter-spacing: .35rem;
+  letter-spacing: .4rem;
   font-weight: 700;
   padding-bottom: 1rem;
   text-transform: uppercase;
